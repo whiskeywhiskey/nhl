@@ -1,0 +1,12 @@
+#questionArea {
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 6px;
+    border-radius: 16px;
+    font-size: 2rem;
+    height: 10rem;
+    width: 67vw;
+}

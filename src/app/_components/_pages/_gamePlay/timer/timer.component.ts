@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from 'src/app/_services/game.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-timer',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerComponent implements OnInit {
 
-  constructor() { }
+  time;
+  myInt;
+  constructor(private myService: GameService) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.start();
+  }
+
+  start() {
+    this.time = 15;
+    this.myInt = setInterval(() => {
+      if (this.time !== 0) {
+        this.time--;
+      } else {
+        this.myService.nextQuestion();
+        clearInterval(this.myInt);
+        this.start();
+      }
+    }, 1000);
+  }
 }

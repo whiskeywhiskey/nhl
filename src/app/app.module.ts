@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { TimerComponent } from './_components/_pages/_gamePlay/timer/timer.compo
 import { PeriodComponent } from './_components/_pages/_gamePlay/period/period.component';
 import { LevelComponent } from './_components/_pages/_gamePlay/level/level.component';
 import { DifficultyComponent } from './_components/_pages/_gamePlay/difficulty/difficulty.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { DifficultyComponent } from './_components/_pages/_gamePlay/difficulty/d
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
