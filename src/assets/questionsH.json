@@ -1,0 +1,406 @@
+{
+    "trivia": [
+        {
+            "question": "Who was drafted first overall in 1984?",
+            "a1": "Wayne Gretzky",
+            "a2": "Bobby Orr",
+            "a3": "Bobby Hull",
+            "a4": "Mario Lemieux",
+            "correctA": "a4"
+        },
+        {
+            "question": "Bobby Orr holds the record for most consecutive Norris Trophies. How many did he win consecutively?",
+            "a1": "6",
+            "a2": "7",
+            "a3": "8",
+            "a4": "9",
+            "correctA": "a3"
+        },
+        {
+            "question": "Who is only defenseman to win the Conn Smythe Trophy twice?",
+            "a1": "Fredrik Olausson",
+            "a2": "Bobby Orr",
+            "a3": "Aubrey Clapper",
+            "a4": "Lionel Conacher",
+            "correctA": "a2"
+        },
+        {
+            "question": "Who is the only NHL player to win the Conn Smythe Trophy before winning the Calder Trophy as rookie of the year?",
+            "a1": "Ken Dryden",
+            "a2": "Butch Goring",
+            "a3": "Glenn Hall",
+            "a4": "Mike Bossy",
+            "correctA": "a1"
+        },
+        {
+            "question": "Who is the only skater to win the Conn Smythe Trophy in a losing cause? Hint: It was won in 1976.",
+            "a1": "Mike Bossy",
+            "a2": "Reggie Leach",
+            "a3": "Glenn Hall",
+            "a4": "Roger Crozier",
+            "correctA": "a2"
+        },
+        {
+            "question": "The Conn Smythe Trophy has been won sixteen times by goaltenders. What other position has won it sixteen times?",
+            "a1": "Right Wingers",
+            "a2": "Defensemen",
+            "a3": "Centers",
+            "a4": "Left Wingers",
+            "correctA": "a3"
+        },
+        {
+            "question": "Which player has won the Conn Smythe Trophy the most times?",
+            "a1": "Patrick Roy",
+            "a2": "Steve Yzerman",
+            "a3": "Scott Stevens",
+            "a4": "Mario Lemieux",
+            "correctA": "a1"
+        },
+        {
+            "question": "Every division has 8 teams except...",
+            "a1": "Metropolitan",
+            "a2": "Central",
+            "a3": "Pacific",
+            "a4": "Atlantic",
+            "correctA": "a2"
+        },
+        {
+            "question": "How many teams in the NHL are based in the Canada?",
+            "a1": "6",
+            "a2": "5",
+            "a3": "8",
+            "a4": "7",
+            "correctA": "a4"
+        },
+        {
+            "question": "How many teams in the NHL are based in USA?",
+            "a1": "22",
+            "a2": "23",
+            "a3": "24",
+            "a4": "25",
+            "correctA": "a3"
+        },
+        {
+            "question": "If two teams are tied in points at the end of the regular season, what is used to determine who is first?",
+            "a1": "GF",
+            "a2": "DIFF",
+            "a3": "ROW",
+            "a4": "GA",
+            "correctA": "a3"
+        },
+        {
+            "question": "The Art Ross Trophy was presented to the NHL in 1947 by Arthur Howey 'Art' Ross. Who was he the General Manager of?",
+            "a1": "Boston Bruins",
+            "a2": "Philadelphia Flyers",
+            "a3": "New York Rangers",
+            "a4": "Montreal Canadiens",
+            "correctA": "a1"
+        },
+        {
+            "question": "Who was the first winner of the Art Ross Trophy?",
+            "a1": "Elmer Lach",
+            "a2": "Dickie Moore",
+            "a3": "Ted Lindsay",
+            "a4": "Gordie Howe",
+            "correctA": "a1"
+        },
+        {
+            "question": "Who was the oldest player to win the Art Ross Trophy?",
+            "a1": "Wayne Gretzky",
+            "a2": "Jaromir Jagr",
+            "a3": "Eric Lindros",
+            "a4": "Martin St. Louis",
+            "correctA": "a4"
+        },
+        {
+            "question": "Who was the first NHL player to score more than 50 goals in a season?",
+            "a1": "Bobby Hull",
+            "a2": "Maurice Richard",
+            "a3": "Bernie Geoffrion",
+            "a4": "Wayne Gretzky",
+            "correctA": "a1"
+        },
+        {
+            "question": "What year was Eric Lindros drafted?",
+            "a1": "1992",
+            "a2": "1990",
+            "a3": "1991",
+            "a4": "1989",
+            "correctA": "a3"
+        },
+        {
+            "question": "What year was Wayne Gretzky traded to the Los Angeles Kings?",
+            "a1": "1990",
+            "a2": "1988",
+            "a3": "1987",
+            "a4": "1989",
+            "correctA": "a2"
+        },
+        {
+            "question": "What team did Wayne Gretzky retire with?",
+            "a1": "Los Angeles Kings",
+            "a2": "St. Louis Blues",
+            "a3": "Edmonton Oilers",
+            "a4": "New York Rangers",
+            "correctA": "a4"
+        },
+        {
+            "question": "How many Stanley Cups did Wayne Gretzky win?",
+            "a1": "3",
+            "a2": "6",
+            "a3": "4",
+            "a4": "5",
+            "correctA": "a3"
+        },
+        {
+            "question": "In the 1985–86 season, the NHL Board of Governors made a decision to introduce offsetting penalties, where neither team lost a man when coincidental penalties were called. What was this rule called?",
+            "a1": "Offset Rule",
+            "a2": "Gretzky Rule",
+            "a3": "Coincidental Rule",
+            "a4": "86er Rule",
+            "correctA": "a2"
+        },
+        {
+            "question": "What team did the Colorado Rockies become?",
+            "a1": "Calgary Flames",
+            "a2": "New Jersey Devils",
+            "a3": "Colorado Avalanche",
+            "a4": "Carolina Hurricanes",
+            "correctA": "a2"
+        },
+        {
+            "question": "How many defunct and relocated teams in the NHL are there?",
+            "a1": "10",
+            "a2": "5",
+            "a3": "16",
+            "a4": "19",
+            "correctA": "a4"
+        },
+        {
+            "question": "Which team in 1976 merged with the Minnesota North Stars, who are currently the Dallas Stars?",
+            "a1": "Philadelphia Quakers",
+            "a2": "Kansas City Scouts",
+            "a3": "Atlanta Flames",
+            "a4": "Cleveland Barons",
+            "correctA": "a4"
+        },
+        {
+            "question": "Which team has the lowest point percentage in NHL history?",
+            "a1": "Carolina Hurricanes",
+            "a2": "Columbus Blue Jackets",
+            "a3": "Arizona Coyotes",
+            "a4": "Vancouver Canucks",
+            "correctA": "a3"
+        },
+        {
+            "question": "How long is it from blue line to blue line?",
+            "a1": "60 ft",
+            "a2": "55 ft",
+            "a3": "50 ft",
+            "a4": " 65 ft",
+            "correctA": "a3"
+        },
+        {
+            "question": "How many Alternate Captains can a team have when the Captain is not dressed for a game?",
+            "a1": "1",
+            "a2": "4",
+            "a3": "2",
+            "a4": "3",
+            "correctA": "a4"
+        },
+        {
+            "question": "What is the minimum hight a player's numbers must be on the back of his sweater?",
+            "a1": "8 in",
+            "a2": "6 in",
+            "a3": "10 in",
+            "a4": "12 in",
+            "correctA": "a3"
+        },
+        {
+            "question": "What is the maximum height the blade of a hockey stick can be?",
+            "a1": "2 3/4 in",
+            "a2": "3 in",
+            "a3": "3 1/4 in",
+            "a4": "2 7/8 in",
+            "correctA": "a2"
+        },
+        {
+            "question": "How many different hand signals does a referee make?",
+            "a1": "20",
+            "a2": "10",
+            "a3": "15",
+            "a4": "30",
+            "correctA": "a4"
+        },
+        {
+            "question": "The act of throwing the body, from any direction, across or below the knees of an opponent is called...",
+            "a1": "Physical Foul",
+            "a2": "Charging",
+            "a3": "Clipping",
+            "a4": "Knee Chopping",
+            "correctA": "a3"
+        }
+    ],
+    "Other 20 questions": [
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        },
+        {
+            "question": "",
+            "a1": "",
+            "a2": "",
+            "a3": "",
+            "a4": "",
+            "correctA": "a"
+        }
+    ]
+}
