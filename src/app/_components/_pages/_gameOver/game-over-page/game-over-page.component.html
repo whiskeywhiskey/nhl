@@ -1,3 +1,112 @@
-<p>
-  game-over-page works!
-</p>
+<div class="bgimg3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mt-2">
+        <img src="../../assets/logo.png" alt="NHL Logo" width="15%" height="100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-2">
+
+      </div>
+      <div class="col-sm-8 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          End of the Game!
+        </h3>
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-2">
+
+      </div>
+
+      <div *ngIf='computer' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
+        <h3><b>
+            Your final score: &nbsp; <span id="scoreF">{{playerScore}}</span>
+          </b></h3>
+      </div>
+      <div *ngIf='computer' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
+        <h3><b>
+            Computer final score: &nbsp; <span id="scoreFC">0</span>
+          </b></h3>
+      </div>
+
+
+      <div class="col-sm-8 whitebg d-flex justify-content-center pt-2">
+        <h3><b>
+            Your final score: &nbsp; <span id="scoreF">{{score}}</span>
+          </b></h3>
+      </div>
+
+      <div class="col-2">
+
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-2">
+
+      </div>
+      <div class="col-sm-8 whitebg d-flex justify-content-center mt-2 pt-2">
+        <h3>
+          Number of correct: <span id="correct">{{correct}}</span>/30
+        </h3>
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+
+      </div>
+      <div class="col-sm-2 whitebg d-flex justify-content-center pr-1 mt-2 pt-2">
+        <h3>
+          Hat tricks: <span id="ht">{{hatTrick}}</span>
+        </h3>
+      </div>
+      <div class="col-sm-2 whitebg d-flex justify-content-center pr-1 mt-2 pt-2">
+        <h3 data-toggle="tooltip" title="Power Play Goals (Coming Soon!)">
+          PPG: <span id="ppg"></span>
+        </h3>
+      </div>
+      <div class="col-sm-2 whitebg d-flex justify-content-center pr-1 mt-2 pt-2">
+        <h3 data-toggle="tooltip" title="Short Handed Goals">
+          SHG: <span id="shg"></span>
+        </h3>
+      </div>
+      <div class="col-sm-2 whitebg d-flex justify-content-center mt-2 pt-2">
+        <h3>
+          Penalties: <span id="pen"></span>
+        </h3>
+      </div>
+      <div class="col-2">
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid mt-3">
+    <div class="row d-flex justify-content-center">
+      <h3 class="white" id="inspiration">
+        Nice Job!
+      </h3>
+    </div>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-sm-4 d-flex justify-content-center">
+        <button [routerLink]="['']" (click)='resetGame()' type="button" class="btn btn-lg btn-block button-special"
+          id="homeF">Home</button>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+</div>

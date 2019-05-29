@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-2">
         <h4 class="d-flex justify-content-center whitebg" id="diff">
-          {{difficulty}}
+          {{d}}
         </h4>
       </div>
       <div class="col-md-1">
@@ -60,18 +60,18 @@
   <div class="container homepagedown">
     <div class="row">
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn [text]='myService.question1.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question1.value'></app-answer-btn>
       </div>
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn [text]='myService.question2.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question2.value'></app-answer-btn>
       </div>
     </div>
     <div class="row">
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn [text]='myService.question3.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question3.value'></app-answer-btn>
       </div>
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn [text]='myService.question4.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question4.value'></app-answer-btn>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
       </div>
 
       <div class="col-md-3 d-flex justify-content-center">
-        <button type="button" class="buttonGame d-flex justify-content-center" [routerLink]="['']"
+        <button type="button" class="buttonGame d-flex justify-content-center" (click)='resetGame()' [routerLink]="['']"
           id="home">Home</button>
       </div>
     </div>

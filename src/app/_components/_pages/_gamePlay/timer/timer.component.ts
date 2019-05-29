@@ -1,34 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GameService } from 'src/app/_services/game.service';
-import { interval } from 'rxjs';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.css']
 })
-export class TimerComponent implements OnInit {
+export class TimerComponent implements OnInit, OnDestroy {
+  t: number;
+  mySub: Subscription;
 
-  time;
-  myInt;
   constructor(private myService: GameService) {
 
   }
 
   ngOnInit() {
-    this.start();
+    this.mySub = this.myService.time.subscribe(
+      x => {
+        this.t = x;
+      }
+    );
   }
 
-  start() {
-    this.time = 15;
-    this.myInt = setInterval(() => {
-      if (this.time !== 0) {
-        this.time--;
-      } else {
-        this.myService.nextQuestion();
-        clearInterval(this.myInt);
-        this.start();
-      }
-    }, 1000);
+  ngOnDestroy() {
+    this.mySub.unsubscribe();
   }
 }

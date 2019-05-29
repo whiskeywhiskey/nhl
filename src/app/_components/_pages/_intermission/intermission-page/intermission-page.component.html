@@ -1,3 +1,61 @@
-<p>
-  intermission-page works!
-</p>
+<div class="bgimg2">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mt-2">
+        <img src="../../assets/logo.png" alt="NHL Logo" width="15%" height="100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-sm-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          End of Period &nbsp; <span id="periodI">{{p}}</span>
+        </h3>
+      </div>
+      <div class="col-3">
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-sm-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          Your Score: &nbsp; <span id="scoreI">{{score}}</span>
+        </h3>
+      </div>
+
+      <div *ngIf='computer' class="col-sm-3 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          Computer Score: &nbsp; <span id="scoreIC">0</span>
+        </h3>
+      </div>
+      <div class="col-3">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid homepagedown">
+    <div class="row">
+
+      <div class="col-sm-6 d-flex justify-content-center">
+        <button type="button" class="btn btn-lg btn-block button-special" (click)='resetGame()' [routerLink]="['']"
+          id="homeI">Home</button>
+      </div>
+      <div class="col-sm-6 d-flex justify-content-center">
+        <button type="button" class="btn btn-lg btn-block button-special" [routerLink]="['/game-play']" id="continueI"
+          (click)='continue()'>Continue</button>
+      </div>
+
+    </div>
+  </div>
+</div>
