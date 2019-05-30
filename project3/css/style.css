@@ -1,0 +1,231 @@
+body{
+    font-family: 'Cabin Sketch', cursive;
+}
+
+
+
+.bgimg{
+  background-image: url('../img/gameplay.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.bgimg2{
+  background-image: url('../img/intermission.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.bgimg3{
+  background-image: url('../img/gameover.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .5rem 8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 60vh;
+  }
+
+  .buttonChoice {
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    background-color: white;
+    width: 100vh !important;
+  }
+
+  .buttonGame {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .3rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+  }
+
+  .button-special {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .5rem 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 0px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 40vw;
+  }
+
+  .text-align-center{
+    text-align: center;
+  }
+
+  #questionArea{
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 6px;
+    border-radius: 16px;
+    font-size: 2rem;
+    height: 10rem;
+    width: 100rem;
+  }
+
+.moveBottomStuff{
+    margin-top: 5rem;
+}
+
+
+.dropdown-item{
+    width: 40vw;
+}
+
+.btn{
+    width: 40vw;
+}
+
+.btn:hover{
+  background-color: rgb(173, 173, 173) !important;
+  color: black !important;
+}
+
+  .button:hover {
+    background-color: rgb(173, 173, 173);
+    color: black;
+  }
+
+  .homepagedown{
+    margin-top: 5vh;
+}
+
+.movetobottom{
+margin-top: 25vh;
+}
+
+.selectpagedown{
+    margin-top: 8rem;
+}
+
+.whitebg{
+    background-color: white;
+}
+
+.white{
+    color: white;
+}
+
+
+
+@media (max-width:768px){
+  #questionArea{
+    font-size: 1.2rem;
+  }
+  .button {
+    font-size: 1.2rem;
+  }
+
+  .buttonChoice {
+    font-size: 1.2rem;
+  }
+
+  .buttonGame {
+    font-size: 1.2rem;
+  }
+
+  .button-special {
+    font-size: 1.2rem;
+  }
+  .moveBottomStuff{
+    margin-top: 1rem;
+}
+#questionArea{
+  height: 7rem;
+}
+}
+
+@media (max-width:576px){
+  .dropdown-item{
+    width: 45vw;
+  } 
+  .button-special {
+    width: 70vw;
+  }
+}
+@media (max-width:550px){
+  .dropdown-item{
+    width: 45vw;
+  } 
+}
+@media (max-width:525px){
+  .dropdown-item{
+    width: 47.5vw;
+  }
+}
+@media (max-width:500px){
+  .dropdown-item{
+    width: 50vw;
+  }
+}
+@media (max-width:475px){
+  .dropdown-item{
+    width: 52.5vw;
+  }
+}
+@media (max-width:450px){
+  .dropdown-item{
+    width: 55vw;
+  }
+}
+@media (max-width:425px){
+  .dropdown-item{
+    width: 57.5vw;
+  }
+}
+@media (max-width:400px){
+  .dropdown-item{
+    width: 60vw;
+  }
+}
+@media (max-width:375px){
+  .dropdown-item{
+    width: 62.5vw;
+  }
+}
+@media (max-width:350px){
+  .dropdown-item{
+    width: 65vw;
+  }
+}
