@@ -10,9 +10,18 @@ import { Subscription } from 'rxjs';
 export class GameOverPageComponent implements OnInit, OnDestroy {
   sub: Subscription;
   sub1: Subscription;
+  sub2: Subscription;
+  sub3: Subscription;
   score: number;
   correct: number;
   hatTrick: any;
+  penalties: number;
+  ppg: number;
+  shg: number;
+  sub4: Subscription;
+  computerScore: number;
+  sub5: Subscription;
+  computer: boolean;
   constructor(private myService: GameService) { }
 
   ngOnInit() {
@@ -23,6 +32,31 @@ export class GameOverPageComponent implements OnInit, OnDestroy {
         this.score = x;
       }
     );
+    this.sub1 = this.myService.penalties.subscribe(
+      x => {
+        this.penalties = x;
+      }
+    );
+    this.sub2 = this.myService.ppg.subscribe(
+      x => {
+        this.ppg = x;
+      }
+    );
+    this.sub3 = this.myService.shg.subscribe(
+      x => {
+        this.shg = x;
+      }
+    );
+    this.sub4 = this.myService.computerScore.subscribe(
+      x => {
+        this.computerScore = x;
+      }
+    );
+    this.sub5 = this.myService.computer.subscribe(
+      x => {
+        this.computer = x;
+      }
+    );
   }
 
   resetGame() {
@@ -31,6 +65,11 @@ export class GameOverPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+    this.sub1.unsubscribe();
+    this.sub2.unsubscribe();
+    this.sub3.unsubscribe();
+    this.sub4.unsubscribe();
+    this.sub5.unsubscribe();
   }
 
 }

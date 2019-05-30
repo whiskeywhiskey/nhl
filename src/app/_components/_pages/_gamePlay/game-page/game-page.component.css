@@ -7,6 +7,14 @@
     width: 100%;
 }
 
+.my-img {
+    background-image: url(../../../../../assets/logo.png);
+    background-position: center;
+    background-size: cover;
+    width: 10em;
+    height: 10em;
+}
+
 .button {
     background-color: white;
     border: none;

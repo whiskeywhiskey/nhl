@@ -12,6 +12,10 @@ export class IntermissionPageComponent implements OnInit, OnDestroy {
   score;
   sub: Subscription;
   sub1: Subscription;
+  sub2: Subscription;
+  comScore: number;
+  sub3: Subscription;
+  computer: boolean;
   constructor(private myService: GameService) { }
 
   ngOnInit() {
@@ -26,12 +30,22 @@ export class IntermissionPageComponent implements OnInit, OnDestroy {
         this.score = x;
       }
     );
+    this.sub2 = this.myService.computerScore.subscribe(
+      x => {
+        this.comScore = x;
+      }
+    );
+    this.sub3 = this.myService.computer.subscribe(
+      x => {
+        this.computer = x;
+      }
+    );
   }
 
   continue() {
-    this.myService.setTimer();
     this.myService.increasePeriod();
     this.myService.nextQuestion();
+    this.myService.setTimer();
   }
 
   resetGame() {
@@ -41,6 +55,7 @@ export class IntermissionPageComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.sub.unsubscribe();
     this.sub1.unsubscribe();
+    this.sub2.unsubscribe();
   }
 
 }

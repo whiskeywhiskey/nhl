@@ -1,4 +1,4 @@
-#questionArea {
+.questionArea {
     background-color: white;
     border: none;
     color: black;
@@ -9,4 +9,12 @@
     font-size: 2rem;
     height: 10rem;
     width: 67vw;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
 }

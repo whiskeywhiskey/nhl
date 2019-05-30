@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-2 mt-2">
         <div class="d-none d-md-block">
-          <img src="../../assets/logo.png" alt="NHL Logo" width="70%" height="100%">
+          <div class="my-img"></div>
         </div>
       </div>
       <div class="col-md-2">
@@ -28,50 +28,42 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid mt-2 mb-2">
+    <div class="row">
+      <div class="col-3">
 
+      </div>
+
+      <div *ngIf='penalty' class="col-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          Penalty!!
+        </h3>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+  </div>
   <div class="container">
     <div class="row">
-      <app-question [text]='myService.question.value'></app-question>
-      <button type="button" class="btn btn-primary" id="modal" data-toggle="modal" data-target="#exampleModalCenter"
-        hidden>
-
-      </button>
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Penalty!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="modalText">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" id="closeMod" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <app-question [text]='q'></app-question>
     </div>
   </div>
   <div class="container homepagedown">
     <div class="row">
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question1.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='q1'></app-answer-btn>
       </div>
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question2.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='q2'></app-answer-btn>
       </div>
     </div>
     <div class="row">
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question3.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='q3'></app-answer-btn>
       </div>
       <div class="mt-3 col-md-6 d-flex justify-content-center">
-        <app-answer-btn (click)='answerClicked($event)' [text]='myService.question4.value'></app-answer-btn>
+        <app-answer-btn (click)='answerClicked($event)' [text]='q4'></app-answer-btn>
       </div>
     </div>
   </div>
@@ -80,10 +72,8 @@
       <div class="col-md-3 d-flex justify-content-center">
         <!-- <button type="button" class="buttonGame d-flex justify-content-center" id="home">Home</button> -->
       </div>
-      <div class="col-md-2 d-flex justify-content-center" *ngIf='computer'>
-        <h4 class="d-flex justify-content-center whitebg p-2">
-          Computer: &nbsp; <span id="scoreC">0</span>
-        </h4>
+      <div class="col-md-2 d-flex justify-content-center">
+        <app-computer-score *ngIf='computer'></app-computer-score>
       </div>
       <div class="col-md-2 d-flex justify-content-center">
         <app-timer></app-timer>

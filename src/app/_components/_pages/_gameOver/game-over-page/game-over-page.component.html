@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 d-flex justify-content-center mt-2">
-        <img src="../../assets/logo.png" alt="NHL Logo" width="15%" height="100%">
+        <div class="my-img"></div>
       </div>
     </div>
   </div>
@@ -30,17 +30,17 @@
 
       <div *ngIf='computer' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
         <h3><b>
-            Your final score: &nbsp; <span id="scoreF">{{playerScore}}</span>
+            Your final score: &nbsp; <span id="scoreF">{{score}}</span>
           </b></h3>
       </div>
       <div *ngIf='computer' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
         <h3><b>
-            Computer final score: &nbsp; <span id="scoreFC">0</span>
+            Computer final score: &nbsp; <span id="scoreFC">{{computerScore}}</span>
           </b></h3>
       </div>
 
 
-      <div class="col-sm-8 whitebg d-flex justify-content-center pt-2">
+      <div *ngIf='!computer' class="col-sm-8 whitebg d-flex justify-content-center pt-2">
         <h3><b>
             Your final score: &nbsp; <span id="scoreF">{{score}}</span>
           </b></h3>
@@ -74,17 +74,17 @@
       </div>
       <div class="col-sm-2 whitebg d-flex justify-content-center pr-1 mt-2 pt-2">
         <h3 data-toggle="tooltip" title="Power Play Goals (Coming Soon!)">
-          PPG: <span id="ppg"></span>
+          PPG: <span id="ppg">{{ppg}}</span>
         </h3>
       </div>
       <div class="col-sm-2 whitebg d-flex justify-content-center pr-1 mt-2 pt-2">
         <h3 data-toggle="tooltip" title="Short Handed Goals">
-          SHG: <span id="shg"></span>
+          SHG: <span id="shg">{{shg}}</span>
         </h3>
       </div>
       <div class="col-sm-2 whitebg d-flex justify-content-center mt-2 pt-2">
         <h3>
-          Penalties: <span id="pen"></span>
+          Penalties: <span id="pen">{{penalties}}</span>
         </h3>
       </div>
       <div class="col-2">

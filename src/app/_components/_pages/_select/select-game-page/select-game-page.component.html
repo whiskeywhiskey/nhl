@@ -2,7 +2,7 @@
   <div class="container-fluid" id="changeMe">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center mt-2">
-        <img src="../../../../../assets/logo.png" alt="NHL Logo" width="20%" height="100%">
+        <div class="my-img"></div>
       </div>
     </div>
     <div class="row">
@@ -22,9 +22,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item d-flex justify-content-center" id="single" (click)='setDifficulty($event)'
-              [routerLink]="['/instructions']">Easy</a>
-            <a class="dropdown-item d-flex justify-content-center" id="single" (click)='setDifficulty($event)'
-              [routerLink]="['/instructions']">Hard</a>
+              [routerLink]="['/instructions']">Normal</a>
+            <!-- <a class="dropdown-item d-flex justify-content-center" id="single" (click)='setDifficulty($event)'
+              [routerLink]="['/instructions']">Hard</a> -->
           </div>
         </div>
       </div>
@@ -43,7 +43,6 @@
               [routerLink]="['/instructions']">Hard</a>
           </div>
         </div>
-
       </div>
     </div>
     <div class="row movetobottom">

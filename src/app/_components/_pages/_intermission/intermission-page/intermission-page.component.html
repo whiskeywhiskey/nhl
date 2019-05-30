@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 d-flex justify-content-center mt-2">
-        <img src="../../assets/logo.png" alt="NHL Logo" width="15%" height="100%">
+        <div class="my-img"></div>
       </div>
     </div>
   </div>
@@ -32,15 +32,27 @@
           Your Score: &nbsp; <span id="scoreI">{{score}}</span>
         </h3>
       </div>
+    </div>
+    <div class="col-3">
 
-      <div *ngIf='computer' class="col-sm-3 whitebg d-flex justify-content-center pt-2">
-        <h3>
-          Computer Score: &nbsp; <span id="scoreIC">0</span>
-        </h3>
-      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid mt-2">
+    <div class="row">
       <div class="col-3">
 
       </div>
+
+      <div *ngIf='computer' class="col-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          Computer Score: &nbsp; <span id="scoreIC">{{comScore}}</span>
+        </h3>
+      </div>
+    </div>
+    <div class="col-3">
+
     </div>
   </div>
 

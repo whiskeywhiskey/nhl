@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
   apiKeypt2 = '1C9zE-b88roLeDE2kH5rVEWAly--EaT2D_C6fRLFveLY';
   apiURLpt3 = '/od6/public/values?alt=json';
   ngOnInit() {
-    this.myService.getURL(this.apiURLpt1 + this.apiKeypt2 + this.apiURLpt3).subscribe(x => console.log(x));
+    // this.myService.getURL(this.apiURLpt1 + this.apiKeypt2 + this.apiURLpt3).subscribe(x => console.log(x));
   }
 
 }

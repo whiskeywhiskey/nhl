@@ -15,7 +15,13 @@ export class SelectGamePageComponent implements OnInit {
 
   setDifficulty(e) {
     this.myService.diff = e.target.innerText;
-    alert(`${e.target.id} + ${e.target.innerText}`);
+    if (e.target.id === 'computer') {
+      this.computerMode();
+    }
+  }
+
+  computerMode() {
+    this.myService.computerMode();
   }
 
 }

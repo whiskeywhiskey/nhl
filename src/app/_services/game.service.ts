@@ -8,35 +8,114 @@ import { Router } from '@angular/router';
 })
 export class GameService {
   diff;
-  data;
+  data = [];
+  origTime: number;
+  ppg = new BehaviorSubject<number>(0);
+  shg = new BehaviorSubject<number>(0);
+  penalties = new BehaviorSubject<number>(0);
   questionNum = new BehaviorSubject<number>(0);
   period = new BehaviorSubject<number>(1);
   score = new BehaviorSubject<number>(0);
+  computerScore = new BehaviorSubject<number>(0);
   question1 = new BehaviorSubject<string>('');
   question2 = new BehaviorSubject<string>('');
   question3 = new BehaviorSubject<string>('');
   question4 = new BehaviorSubject<string>('');
   question = new BehaviorSubject<string>('');
+  time = new BehaviorSubject<number>(15);
+  computer = new BehaviorSubject<boolean>(false);
+  incorrectAnswer = new BehaviorSubject<boolean>(false);
+  correctAnswer = new BehaviorSubject<boolean>(false);
+  penalty = new BehaviorSubject<boolean>(false);
   l;
   num;
   correctCounter = 0;
   correct = 0;
   hatTrick = 0;
-  time = new BehaviorSubject<number>(15);
-
+  shortHanded = 0;
+  ob = {
+    a1: '',
+    a2: '',
+    a3: '',
+    a4: '',
+    q: '',
+    an: ''
+  };
 
   apiURLpt1 = 'https://spreadsheets.google.com/feeds/list/';
   apiKeypt2 = '1C9zE-b88roLeDE2kH5rVEWAly--EaT2D_C6fRLFveLY';
   apiURLpt3 = '/od6/public/values?alt=json';
   myInt;
+  tickaudio = new Audio();
 
   constructor(private http: HttpClient, private router: Router) {
+    this.getData();
+    this.origTime = 15;
+    this.tickaudio.src = './assets/sound/tick.wav';
+    // this.nhlSong();
+  }
+
+  nhlSong() {
+    const audio = new Audio();
+    audio.src = './assets/sound/nhl.wav';
+    audio.load();
+    audio.play();
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
+
+  penaltySound() {
+    const audio = new Audio();
+    audio.src = './assets/sound/whistle.wav';
+    audio.load();
+    audio.play();
+  }
+
+  intermissionSound() {
+    const audio = new Audio();
+    audio.src = './assets/sound/hockeyStop.mp3';
+    audio.load();
+    audio.play();
+  }
+
+  wrongSound() {
+    const audio = new Audio();
+    audio.src = './assets/sound/incorrect.mp3';
+    audio.load();
+    audio.play();
+  }
+
+  correctSound() {
+    const audio = new Audio();
+    audio.src = './assets/sound/correct.wav';
+    audio.load();
+    audio.play();
+  }
+
+  getData() {
+    this.data = [];
     this.getURL(this.apiURLpt1 + this.apiKeypt2 + this.apiURLpt3).subscribe(
       x => {
-        this.data = x;
-        this.l = this.data.feed.entry.length;
-        // this.nextQuestion();
-        // this.setTimer();
+        for (const i of x.feed.entry) {
+          this.ob.a1 = i.gsx$a1.$t;
+          this.ob.a2 = i.gsx$a2.$t;
+          this.ob.a3 = i.gsx$a3.$t;
+          this.ob.a4 = i.gsx$a4.$t;
+          this.ob.q = i.gsx$question.$t;
+          this.ob.an = i.gsx$correcta.$t;
+          this.data.push(this.ob);
+          this.ob = {
+            a1: '',
+            a2: '',
+            a3: '',
+            a4: '',
+            q: '',
+            an: ''
+          };
+        }
+        this.l = this.data.length;
       });
   }
 
@@ -44,53 +123,89 @@ export class GameService {
     return this.http.get<any>(url);
   }
 
+  computerMode() {
+    this.computer.next(true);
+  }
+
   nextQuestion() {
-    this.num = Math.floor((Math.random() * this.l) + 1);
-    console.log(this.num);
-    this.question.next(this.data.feed.entry[this.num].gsx$question.$t);
-    this.question1.next(this.data.feed.entry[this.num].gsx$a1.$t);
-    this.question2.next(this.data.feed.entry[this.num].gsx$a2.$t);
-    this.question3.next(this.data.feed.entry[this.num].gsx$a3.$t);
-    this.question4.next(this.data.feed.entry[this.num].gsx$a4.$t);
+    this.clearTimer();
+    this.num = Math.floor((Math.random() * this.l - 1) + 1);
+    this.question.next(this.data[this.num].q);
+    this.question1.next(this.data[this.num].a1);
+    this.question2.next(this.data[this.num].a2);
+    this.question3.next(this.data[this.num].a3);
+    this.question4.next(this.data[this.num].a4);
     this.increasequestionNum();
   }
 
 
-  checkAnswer(value) {
-    if (value === this.data.feed.entry[this.num].gsx$correcta.$t) {
-      this.correct++;
-      this.correctCounter++;
-      this.increaseScore();
+  checkAnswer(value: string) {
+    if (value === this.data[this.num].an) {
+      this.correctAnswer.next(true);
+      if (this.shortHanded > 0) {
+        const sh = this.shg.value;
+        this.shg.next(sh + 1);
+        this.shortHanded--;
+      }
+      this.correctSound();
     } else {
-      this.correctCounter = 0;
+      this.incorrectAnswer.next(true);
+      this.wrongSound();
     }
-    if (this.intermissionCheck() && this.gameOver()) {
-      this.nextQuestion();
-      this.resetTimer();
-    } else {
-      this.changePage();
-    }
+    this.clearTimer();
+    setTimeout(() => {
+      if (value === this.data[this.num].an) {
+        this.correct++;
+        this.correctCounter++;
+        this.increaseScore();
+      } else {
+        this.correctCounter = 0;
+      }
+      if (this.computer.value) {
+        this.computerPlay();
+      }
+      this.data.splice(this.num, 1);
+      this.l = this.data.length;
+      this.correctAnswer.next(false);
+      this.incorrectAnswer.next(false);
+      if (!this.intermissionCheck() && !this.gameOver()) {
+        this.nextQuestion();
+        if (this.shortHanded === 0) {
+          this.origTime = 15;
+        }
+        this.setTimer();
+      } else {
+        this.changePage();
+      }
+    }, 300);
+
   }
 
   setTimer() {
     this.myInt = setInterval(() => {
       const tt = this.time.value;
       if (this.time.value !== 0) {
+        if (this.time.value <= 6) {
+          this.tickaudio.load();
+          this.tickaudio.play();
+        }
         this.time.next(tt - 1);
       } else {
+        this.tickaudio.pause();
+        this.assignPenalty();
         this.checkAnswer('');
-        this.time.next(15);
+        this.time.next(this.origTime);
       }
     }, 1000);
   }
 
   clearTimer() {
     clearInterval(this.myInt);
-    this.time.next(15);
+    this.time.next(this.origTime);
   }
 
   resetTimer() {
-    this.time.next(15);
+    this.time.next(this.origTime);
   }
 
   increaseScore() {
@@ -116,19 +231,48 @@ export class GameService {
   }
 
   intermissionCheck() {
-    return (this.questionNum.value === 9 || this.questionNum.value === 19) ? false : true;
+    return (this.questionNum.value === 10 || this.questionNum.value === 20) ? true : false;
   }
 
   gameOver() {
-    return (this.questionNum.value === 29) ? false : true;
+    return (this.questionNum.value === 30) ? true : false;
   }
 
   changePage() {
     this.clearTimer();
-    if (this.questionNum.value === 9 || this.questionNum.value === 19) {
+    this.intermissionSound();
+    if (this.questionNum.value === 10 || this.questionNum.value === 20) {
       this.router.navigateByUrl('/intermission');
     } else {
       this.router.navigateByUrl('/game-over');
+    }
+  }
+
+  assignPenalty() {
+    this.penalty.next(true);
+    setTimeout(() => {
+      this.penalty.next(false);
+    }, 3500);
+    this.penaltySound();
+    this.origTime = 10;
+    const p = this.penalties.value;
+    this.penalties.next(p + 1);
+    this.shortHanded++;
+  }
+
+  computerPlay() {
+    let d: number;
+    if (this.diff === 'Easy') {
+      d = 6;
+    } else if (this.diff === 'Medium') {
+      d = 4;
+    } else if (this.diff === 'Hard') {
+      d = 2;
+    }
+    const comNum = Math.floor((Math.random() * d) + 1);
+    if (comNum === d / 2) {
+      const s = this.computerScore.value;
+      this.computerScore.next(s + 1);
     }
   }
 
@@ -137,15 +281,25 @@ export class GameService {
     this.questionNum.next(0);
     this.period.next(1);
     this.score.next(0);
+    this.computerScore.next(0);
+    this.ppg.next(0);
+    this.shg.next(0);
     this.question1.next('');
     this.question2.next('');
     this.question3.next('');
     this.question4.next('');
     this.question.next('');
+    this.computer.next(false);
+    this.incorrectAnswer.next(false);
+    this.correctAnswer.next(false);
+    this.penalty.next(false);
     this.num = null;
     this.correctCounter = 0;
     this.correct = 0;
     this.hatTrick = 0;
+    this.shortHanded = 0;
+    this.origTime = 15;
+    this.getData();
   }
 
 }
