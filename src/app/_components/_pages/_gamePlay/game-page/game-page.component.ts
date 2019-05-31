@@ -81,6 +81,15 @@ export class GamePageComponent implements OnInit, OnDestroy {
     this.myService.checkAnswer(e.target.innerText);
   }
 
+
+  on() {
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  off() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+
   resetGame() {
     this.myService.resetGame();
     this.soundService.button.play();

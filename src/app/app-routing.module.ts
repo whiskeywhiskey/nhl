@@ -6,6 +6,7 @@ import { GamePageComponent } from './_components/_pages/_gamePlay/game-page/game
 import { IntermissionPageComponent } from './_components/_pages/_intermission/intermission-page/intermission-page.component';
 import { GameOverPageComponent } from './_components/_pages/_gameOver/game-over-page/game-over-page.component';
 import { GameInformationPageComponent } from './_components/_pages/_instructions/game-information-page/game-information-page.component';
+import { OptionsComponent } from './_components/_pages/options/options.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'game-over',
     component: GameOverPageComponent
+  },
+  {
+    path: 'options',
+    component: OptionsComponent
   }
 ];
 

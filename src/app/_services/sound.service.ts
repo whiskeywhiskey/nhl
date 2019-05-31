@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class SoundService {
   correct = new Audio();
   tick = new Audio();
   button = new Audio();
+  music = new BehaviorSubject<boolean>(true);
 
   constructor() {
     this.nhl.src = './assets/sound/nhl.wav';
@@ -71,10 +73,20 @@ export class SoundService {
   }
 
   midVolume() {
-    this.nhl.volume = 0.4;
+    this.nhl.volume = 0.7;
   }
 
   lowVolume() {
     this.nhl.volume = 0.2;
+  }
+
+  killMusic() {
+    this.nhl.pause();
+    this.music.next(false);
+  }
+
+  addMusic() {
+    this.nhl.play();
+    this.music.next(true);
   }
 }

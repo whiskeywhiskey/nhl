@@ -23,9 +23,12 @@ export class GameOverPageComponent implements OnInit, OnDestroy {
   computerScore: number;
   sub5: Subscription;
   computer: boolean;
+  playerWin = false;
+  computerWin = false;
+  inspiration: string;
   constructor(private myService: GameService, private soundService: SoundService) {
     this.soundService.highVolume();
-   }
+  }
 
   ngOnInit() {
     this.correct = this.myService.correct;
@@ -60,6 +63,14 @@ export class GameOverPageComponent implements OnInit, OnDestroy {
         this.computer = x;
       }
     );
+
+    if (this.score >= this.computerScore) {
+      this.playerWin = true;
+      this.inspiration = 'Nice Job!';
+    } else {
+      this.computerWin = true;
+      this.inspiration = 'Better luck next time!';
+    }
   }
 
   resetGame() {

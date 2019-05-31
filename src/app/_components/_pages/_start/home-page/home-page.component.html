@@ -23,11 +23,14 @@
             </button>
           </div>
           <div class="modal-body">
-            Game Developed by Matthew Hicks! Stay tuned for updates! Powerplays for computer mode are on
-            the horizon! Highscore feature for single player, an options page, overtime and shootouts
-            for computer mode, plus more questions to follow!
+            <p class='d-flex justify-content-center'>
+              Game Developed by Matthew Hicks! Stay tuned for updates!
+            </p>
+            <p>Player vs Player mode is on the horizon! Highscore feature for single player, overtime and shootouts for
+              computer mode, and powerplays for computer mode to follow!
+            </p>
             <hr>
-            <p>Note: Game is not completely optimized for phones or tablets, but you can play on them.
+            <p>Note: Game is not optimized for phones or tablets.
               Please play on chrome or firefox for
               optimal
               experience.</p>
@@ -54,12 +57,20 @@
   <div class="container homepagedown">
     <div class="row">
       <div class="col-md-6 d-flex justify-content-center">
-        <button type="button" class="button d-flex justify-content-center" (click)='btnClicked()' [routerLink]="['/select']"
-          id="start">Start</button>
+        <button type="button" class="button d-flex justify-content-center" (click)='btnClicked()'
+          [routerLink]="['/select']" id="start">Start</button>
       </div>
       <div class="col-md-6 d-flex justify-content-center">
         <button type="button" class="button d-flex justify-content-center" (click)='btnClicked()' data-toggle="modal"
           data-target="#exampleModalCenter" id="options">About</button>
+      </div>
+    </div>
+  </div>
+  <div class="contianer fixed-bottom">
+    <div class="row">
+      <div class="col-1">
+        <button type="button" class="button d-flex justify-content-center" (click)='btnClicked()'
+          [routerLink]="['options']" id="option">Options</button>
       </div>
     </div>
   </div>

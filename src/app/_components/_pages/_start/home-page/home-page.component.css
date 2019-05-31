@@ -30,6 +30,21 @@
     width: 60vh;
 }
 
+button#option {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .3rem 6rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 10vh;
+}
+
 .text-align-center {
     text-align: center;
 }

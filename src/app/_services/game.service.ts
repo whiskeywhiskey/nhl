@@ -212,9 +212,9 @@ export class GameService {
     this.penalty.next(true);
     setTimeout(() => {
       this.penalty.next(false);
-    }, 1800);
+    }, 2000);
     this.soundService.penalty.play();
-    this.origTime = 10;
+    this.origTime = 12;
     const p = this.penalties.value;
     this.penalties.next(p + 1);
     this.shortHanded++;

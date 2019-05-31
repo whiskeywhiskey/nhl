@@ -27,17 +27,28 @@
       <div class="col-2">
 
       </div>
-
-      <div *ngIf='computer' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
-        <h3><b>
-            Your final score: &nbsp; <span id="scoreF">{{score}}</span>
-          </b></h3>
-      </div>
-      <div *ngIf='computer' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
-        <h3><b>
+      <div *ngIf='computer && computerWin' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
+        <h3 class='green'><b>
             Computer final score: &nbsp; <span id="scoreFC">{{computerScore}}</span>
           </b></h3>
       </div>
+      <div *ngIf='computer && computerWin' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
+        <h3 class='red'><b>
+            Your final score: &nbsp; <span id="scoreF">{{score}}</span>
+          </b></h3>
+      </div>
+
+      <div *ngIf='computer && playerWin' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
+        <h3 class='red'><b>
+            Computer final score: &nbsp; <span id="scoreFC">{{computerScore}}</span>
+          </b></h3>
+      </div>
+      <div *ngIf='computer && playerWin' class="col-sm-4 whitebg d-flex justify-content-center pt-2">
+        <h3 class='green'><b>
+            Your final score: &nbsp; <span id="scoreF">{{score}}</span>
+          </b></h3>
+      </div>
+
 
 
       <div *ngIf='!computer' class="col-sm-8 whitebg d-flex justify-content-center pt-2">
@@ -97,7 +108,7 @@
   <div class="container-fluid mt-3">
     <div class="row d-flex justify-content-center">
       <h3 class="white" id="inspiration">
-        Nice Job!
+        {{inspiration}}
       </h3>
     </div>
     <div class="row">
