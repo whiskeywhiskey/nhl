@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GameService } from 'src/app/_services/game.service';
 import { Subscription } from 'rxjs';
+import { SoundService } from 'src/app/_services/sound.service';
 
 @Component({
   selector: 'app-game-over-page',
@@ -22,7 +23,9 @@ export class GameOverPageComponent implements OnInit, OnDestroy {
   computerScore: number;
   sub5: Subscription;
   computer: boolean;
-  constructor(private myService: GameService) { }
+  constructor(private myService: GameService, private soundService: SoundService) {
+    this.soundService.highVolume();
+   }
 
   ngOnInit() {
     this.correct = this.myService.correct;
@@ -61,6 +64,7 @@ export class GameOverPageComponent implements OnInit, OnDestroy {
 
   resetGame() {
     this.myService.resetGame();
+    this.soundService.button.play();
   }
 
   ngOnDestroy() {

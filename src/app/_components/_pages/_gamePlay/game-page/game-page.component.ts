@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GameService } from 'src/app/_services/game.service';
 import { Subscription } from 'rxjs';
+import { SoundService } from 'src/app/_services/sound.service';
 
 @Component({
   selector: 'app-game-page',
@@ -24,8 +25,11 @@ export class GamePageComponent implements OnInit, OnDestroy {
   sub5: Subscription;
   sub6: Subscription;
   penalty: boolean;
+  computerScored: any;
+  sub7: any;
 
-  constructor(public myService: GameService) {
+  constructor(private myService: GameService, private soundService: SoundService) {
+    this.soundService.lowVolume();
     this.sub = this.myService.question1.subscribe(
       x => {
         this.q1 = x;
@@ -61,6 +65,11 @@ export class GamePageComponent implements OnInit, OnDestroy {
         this.penalty = x;
       }
     );
+    this.sub7 = this.myService.computerScored.subscribe(
+      x => {
+        this.computerScored = x;
+      }
+    );
   }
 
   ngOnInit() {
@@ -74,6 +83,7 @@ export class GamePageComponent implements OnInit, OnDestroy {
 
   resetGame() {
     this.myService.resetGame();
+    this.soundService.button.play();
   }
 
   ngOnDestroy() {
@@ -84,5 +94,6 @@ export class GamePageComponent implements OnInit, OnDestroy {
     this.sub4.unsubscribe();
     this.sub5.unsubscribe();
     this.sub6.unsubscribe();
+    this.sub7.unsubscribe();
   }
 }

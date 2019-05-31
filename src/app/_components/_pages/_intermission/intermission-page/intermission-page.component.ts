@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GameService } from 'src/app/_services/game.service';
 import { Subscription } from 'rxjs';
+import { SoundService } from 'src/app/_services/sound.service';
 
 @Component({
   selector: 'app-intermission-page',
@@ -16,9 +17,10 @@ export class IntermissionPageComponent implements OnInit, OnDestroy {
   comScore: number;
   sub3: Subscription;
   computer: boolean;
-  constructor(private myService: GameService) { }
+  constructor(private myService: GameService, private soundService: SoundService) { }
 
   ngOnInit() {
+    this.soundService.midVolume();
     this.sub = this.myService.period.subscribe(
       x => {
         this.p = x;
@@ -46,10 +48,12 @@ export class IntermissionPageComponent implements OnInit, OnDestroy {
     this.myService.increasePeriod();
     this.myService.nextQuestion();
     this.myService.setTimer();
+    this.soundService.button.play();
   }
 
   resetGame() {
     this.myService.resetGame();
+    this.soundService.button.play();
   }
 
   ngOnDestroy() {

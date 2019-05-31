@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GameService } from 'src/app/_services/game.service';
+import { SoundService } from 'src/app/_services/sound.service';
 
 @Component({
   selector: 'app-game-information-page',
@@ -11,7 +12,7 @@ export class GameInformationPageComponent implements OnInit, OnDestroy {
   computer: boolean;
   penalty: boolean;
 
-  constructor(private myService: GameService) { }
+  constructor(private myService: GameService, private soundService: SoundService) { }
 
   ngOnInit() {
     this.sub = this.myService.computer.subscribe(
@@ -24,6 +25,7 @@ export class GameInformationPageComponent implements OnInit, OnDestroy {
   startGame() {
     this.myService.nextQuestion();
     this.myService.setTimer();
+    this.soundService.button.play();
   }
   ngOnDestroy() {
     this.sub.unsubscribe();

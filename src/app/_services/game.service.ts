@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
+import { SoundService } from './sound.service';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,7 @@ export class GameService {
   incorrectAnswer = new BehaviorSubject<boolean>(false);
   correctAnswer = new BehaviorSubject<boolean>(false);
   penalty = new BehaviorSubject<boolean>(false);
+  computerScored = new BehaviorSubject<boolean>(false);
   l;
   num;
   correctCounter = 0;
@@ -46,52 +48,10 @@ export class GameService {
   apiKeypt2 = '1C9zE-b88roLeDE2kH5rVEWAly--EaT2D_C6fRLFveLY';
   apiURLpt3 = '/od6/public/values?alt=json';
   myInt;
-  tickaudio = new Audio();
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private soundService: SoundService) {
     this.getData();
     this.origTime = 15;
-    this.tickaudio.src = './assets/sound/tick.wav';
-    // this.nhlSong();
-  }
-
-  nhlSong() {
-    const audio = new Audio();
-    audio.src = './assets/sound/nhl.wav';
-    audio.load();
-    audio.play();
-    audio.addEventListener('ended', function () {
-      this.currentTime = 0;
-      this.play();
-    }, false);
-  }
-
-  penaltySound() {
-    const audio = new Audio();
-    audio.src = './assets/sound/whistle.wav';
-    audio.load();
-    audio.play();
-  }
-
-  intermissionSound() {
-    const audio = new Audio();
-    audio.src = './assets/sound/hockeyStop.mp3';
-    audio.load();
-    audio.play();
-  }
-
-  wrongSound() {
-    const audio = new Audio();
-    audio.src = './assets/sound/incorrect.mp3';
-    audio.load();
-    audio.play();
-  }
-
-  correctSound() {
-    const audio = new Audio();
-    audio.src = './assets/sound/correct.wav';
-    audio.load();
-    audio.play();
   }
 
   getData() {
@@ -147,10 +107,10 @@ export class GameService {
         this.shg.next(sh + 1);
         this.shortHanded--;
       }
-      this.correctSound();
+      this.soundService.correct.play();
     } else {
       this.incorrectAnswer.next(true);
-      this.wrongSound();
+      this.soundService.wrong.play();
     }
     this.clearTimer();
     setTimeout(() => {
@@ -186,12 +146,12 @@ export class GameService {
       const tt = this.time.value;
       if (this.time.value !== 0) {
         if (this.time.value <= 6) {
-          this.tickaudio.load();
-          this.tickaudio.play();
+          this.soundService.tick.load();
+          this.soundService.tick.play();
         }
         this.time.next(tt - 1);
       } else {
-        this.tickaudio.pause();
+        this.soundService.tick.pause();
         this.assignPenalty();
         this.checkAnswer('');
         this.time.next(this.origTime);
@@ -240,7 +200,7 @@ export class GameService {
 
   changePage() {
     this.clearTimer();
-    this.intermissionSound();
+    this.soundService.intermission.play();
     if (this.questionNum.value === 10 || this.questionNum.value === 20) {
       this.router.navigateByUrl('/intermission');
     } else {
@@ -252,8 +212,8 @@ export class GameService {
     this.penalty.next(true);
     setTimeout(() => {
       this.penalty.next(false);
-    }, 3500);
-    this.penaltySound();
+    }, 1800);
+    this.soundService.penalty.play();
     this.origTime = 10;
     const p = this.penalties.value;
     this.penalties.next(p + 1);
@@ -273,6 +233,10 @@ export class GameService {
     if (comNum === d / 2) {
       const s = this.computerScore.value;
       this.computerScore.next(s + 1);
+      this.computerScored.next(true);
+      setTimeout(() => {
+        this.computerScored.next(false);
+      }, 1800);
     }
   }
 
@@ -293,6 +257,7 @@ export class GameService {
     this.incorrectAnswer.next(false);
     this.correctAnswer.next(false);
     this.penalty.next(false);
+    this.computerScored.next(false);
     this.num = null;
     this.correctCounter = 0;
     this.correct = 0;
