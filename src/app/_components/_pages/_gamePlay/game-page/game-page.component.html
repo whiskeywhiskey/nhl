@@ -37,10 +37,7 @@
 
       </div>
 
-      <div class="col-6 whitebg d-flex justify-content-center pt-2" id="p">
-        <!--         <h3 *ngIf='penalty' class="bounceIn">
-          Penalty!
-        </h3> -->
+      <div *ngIf='computer' class="col-6 whitebg d-flex justify-content-center pt-2" id="p">
         <h3 *ngIf='computerScored' class="bounceIn">
           &nbsp;Computer Scored!
         </h3>

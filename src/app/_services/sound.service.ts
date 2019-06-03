@@ -13,6 +13,7 @@ export class SoundService {
   tick = new Audio();
   button = new Audio();
   music = new BehaviorSubject<boolean>(true);
+  buttonSound = new BehaviorSubject<boolean>(true);
 
   constructor() {
     this.nhl.src = './assets/sound/nhl.wav';
@@ -88,5 +89,15 @@ export class SoundService {
   addMusic() {
     this.nhl.play();
     this.music.next(true);
+  }
+
+  killButton() {
+    this.button.volume = 0;
+    this.buttonSound.next(false);
+  }
+
+  addButton() {
+    this.button.volume = 1;
+    this.buttonSound.next(true);
   }
 }

@@ -12,10 +12,16 @@ export class OptionsComponent implements OnInit {
 
   ngOnInit() {
     const cc = document.getElementById('checkMaster') as HTMLInputElement;
+    const bs = document.getElementById('buttonMaster') as HTMLInputElement;
     if (this.soundService.music.value) {
       cc.checked = true;
     } else {
       cc.checked = false;
+    }
+    if (this.soundService.buttonSound.value) {
+      bs.checked = true;
+    } else {
+      bs.checked = false;
     }
   }
 
@@ -24,10 +30,20 @@ export class OptionsComponent implements OnInit {
   }
 
   s(e) {
+    this.soundService.button.play();
     if (e.target.checked) {
       this.soundService.addMusic();
     } else {
       this.soundService.killMusic();
+    }
+  }
+
+  b(e) {
+    this.soundService.button.play();
+    if (e.target.checked) {
+      this.soundService.addButton();
+    } else {
+      this.soundService.killButton();
     }
   }
 
