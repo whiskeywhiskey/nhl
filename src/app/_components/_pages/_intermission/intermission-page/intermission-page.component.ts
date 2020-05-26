@@ -6,7 +6,7 @@ import { SoundService } from 'src/app/_services/sound.service';
 @Component({
   selector: 'app-intermission-page',
   templateUrl: './intermission-page.component.html',
-  styleUrls: ['./intermission-page.component.css']
+  styleUrls: ['./intermission-page.component.scss']
 })
 export class IntermissionPageComponent implements OnInit, OnDestroy {
   p;

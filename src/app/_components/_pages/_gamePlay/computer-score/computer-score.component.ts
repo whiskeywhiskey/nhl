@@ -4,7 +4,7 @@ import { GameService } from 'src/app/_services/game.service';
 @Component({
   selector: 'app-computer-score',
   templateUrl: './computer-score.component.html',
-  styleUrls: ['./computer-score.component.css']
+  styleUrls: ['./computer-score.component.scss']
 })
 export class ComputerScoreComponent implements OnInit, OnDestroy {
   comScore: number;

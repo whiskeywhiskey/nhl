@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-period',
   templateUrl: './period.component.html',
-  styleUrls: ['./period.component.css']
+  styleUrls: ['./period.component.scss']
 })
 export class PeriodComponent implements OnInit, OnDestroy {
 

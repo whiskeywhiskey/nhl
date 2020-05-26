@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-player-score',
   templateUrl: './player-score.component.html',
-  styleUrls: ['./player-score.component.css']
+  styleUrls: ['./player-score.component.scss']
 })
 export class PlayerScoreComponent implements OnInit, OnDestroy {
   mySub: Subscription;

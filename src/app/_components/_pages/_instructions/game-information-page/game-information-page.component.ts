@@ -5,7 +5,7 @@ import { SoundService } from 'src/app/_services/sound.service';
 @Component({
   selector: 'app-game-information-page',
   templateUrl: './game-information-page.component.html',
-  styleUrls: ['./game-information-page.component.css']
+  styleUrls: ['./game-information-page.component.scss']
 })
 export class GameInformationPageComponent implements OnInit, OnDestroy {
   sub: any;

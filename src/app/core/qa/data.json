@@ -1,0 +1,642 @@
+[
+    {
+        "Question": "Who was drafted first overall in 1984?",
+        "A1": "Wayne Gretzky",
+        "A2": "Bobby Orr",
+        "A3": "Bobby Hull",
+        "A4": "Mario Lemieux",
+        "Answer": "Mario Lemieux"
+    },
+    {
+        "Question": "Bobby Orr holds the record for most consecutive Norris Trophies. How many did he win consecutively?",
+        "A1": "6",
+        "A2": "7",
+        "A3": "8",
+        "A4": "9",
+        "Answer": "8"
+    },
+    {
+        "Question": "How many minutes is a minor penalty?",
+        "A1": "2",
+        "A2": "4",
+        "A3": "5",
+        "A4": "10",
+        "Answer": "2"
+    },
+    {
+        "Question": "How long is an NHL ice rink?",
+        "A1": "200ft",
+        "A2": "150ft",
+        "A3": "100yds",
+        "A4": "25yds",
+        "Answer": "200ft"
+    },
+    {
+        "Question": "What is Detroit's team name?",
+        "A1": "Red Wings",
+        "A2": "Penguins",
+        "A3": "Oilers",
+        "A4": "Blackhawks",
+        "Answer": "Red Wings"
+    },
+    {
+        "Question": "What player is known as 'Moose'",
+        "A1": "Mark Messier",
+        "A2": "Bobby Orr",
+        "A3": "Jeff Skinner",
+        "A4": "Bobby Hull",
+        "Answer": "Mark Messier"
+    },
+    {
+        "Question": "Who were the Broad Street Bullies?",
+        "A1": "Philadelphia Flyers",
+        "A2": "Boston Bruins",
+        "A3": "New York Rangers",
+        "A4": "Chicago Blackhawks",
+        "Answer": "Philadelphia Flyers"
+    },
+    {
+        "Question": "Who was the last team to win back to back Stanley Cups?",
+        "A1": "Pittsburgh Penguins",
+        "A2": "Washington Capitals",
+        "A3": "Chicago Blackhawks",
+        "A4": "Dallas Start",
+        "Answer": "Pittsburgh Penguins"
+    },
+    {
+        "Question": "Who won the Stanley Cup in 2000?",
+        "A1": "New Jersey Devils",
+        "A2": "Arizona Coyotes",
+        "A3": "Dallas Stars",
+        "A4": "Florida panthers",
+        "Answer": "New Jersey Devils"
+    },
+    {
+        "Question": "Who was the first winner of the Art Ross Trophy?",
+        "A1": "Elmer Lach",
+        "A2": "Dickie Moore",
+        "A3": "Ted Lindsay",
+        "A4": "Gordie Howe",
+        "Answer": "Elmer Lach"
+    },
+    {
+        "Question": "Which player has won the Conn Smythe Trophy the most times?",
+        "A1": "Patrick Roy",
+        "A2": "Steve Yzerman",
+        "A3": "Scott Stevens",
+        "A4": "Mario Lemieux",
+        "Answer": "Patrick Roy"
+    },
+    {
+        "Question": "Who is the only NHL player to win the Conn Smythe Trophy before winning the Calder Trophy as rookie of the year?",
+        "A1": "Ken Dryden",
+        "A2": "Butch Goring",
+        "A3": "Glenn Hall",
+        "A4": "Mike Bossy",
+        "Answer": "Ken Dryden"
+    },
+    {
+        "Question": "The Art Ross Trophy was presented to the NHL in 1947 by Arthur Howey 'Art' Ross. Who was he the General Manager of?",
+        "A1": "Boston Bruins",
+        "A2": "Philadelphia Flyers",
+        "A3": "New York Rangers",
+        "A4": "Montreal Canadiens",
+        "Answer": "Boston Bruins"
+    },
+    {
+        "Question": "What is it called when a puck is dropped after a stoppage of play?",
+        "A1": "Faceoff",
+        "A2": "Tip-off",
+        "A3": "Puck Drop",
+        "A4": "Puck Toss",
+        "Answer": "Faceoff"
+    },
+    {
+        "Question": "Which team has won the most Stanley Cups?",
+        "A1": "Montreal Canadiens",
+        "A2": "Detroit Red Wings",
+        "A3": "Boston Bruins",
+        "A4": "Toronto Maple Leafs",
+        "Answer": "Montreal Canadiens"
+    },
+    {
+        "Question": "Who was the first NHL player to score more than 50 goals in a season?",
+        "A1": "Bobby Hull",
+        "A2": "Maurice Richard",
+        "A3": "Bernie Geoffrion",
+        "A4": "Wayne Gretzky",
+        "Answer": "Bobby Hull"
+    },
+    {
+        "Question": "When is high-sticking a double minor penalty?",
+        "A1": "When blood is drawn",
+        "A2": "When a bone is broken",
+        "A3": "When a stick is broken",
+        "A4": "When a tooth is knocked out",
+        "Answer": "When blood is drawn"
+    },
+    {
+        "Question": "How many referees are on the ice at a time?",
+        "A1": "1",
+        "A2": "2",
+        "A3": "3",
+        "A4": "4",
+        "Answer": "2"
+    },
+    {
+        "Question": "How many linesmen are on the ice at one time?",
+        "A1": "1",
+        "A2": "2",
+        "A3": "3",
+        "A4": "4",
+        "Answer": "2"
+    },
+    {
+        "Question": "How many forwards are usually on the bench?",
+        "A1": "10",
+        "A2": "12",
+        "A3": "8",
+        "A4": "9",
+        "Answer": "12"
+    },
+    {
+        "Question": "How many minutes is a double minor penalty?",
+        "A1": "2",
+        "A2": "4",
+        "A3": "5",
+        "A4": "10",
+        "Answer": "4"
+    },
+    {
+        "Question": "How many minutes are in each period?",
+        "A1": "17",
+        "A2": "20",
+        "A3": "15",
+        "A4": "12",
+        "Answer": "20"
+    },
+    {
+        "Question": "The most goals scored in an NHL season is by Wayne Gretzky in the 1981/82 season. How many were there?",
+        "A1": "88",
+        "A2": "92",
+        "A3": "73",
+        "A4": "96",
+        "Answer": "92"
+    },
+    {
+        "Question": "What year was Wayne Gretzky traded to the Los Angeles Kings?",
+        "A1": "1990",
+        "A2": "1988",
+        "A3": "1987",
+        "A4": "1989",
+        "Answer": "1988"
+    },
+    {
+        "Question": "How many points did Wayne Gretzky have?",
+        "A1": "1,987",
+        "A2": "2,857",
+        "A3": "2,564",
+        "A4": "3,274",
+        "Answer": "2,857"
+    },
+    {
+        "Question": "What is the maximum height the blade of a hockey stick can be?",
+        "A1": "2 3/4 in",
+        "A2": "3 in",
+        "A3": "3 1/4 in",
+        "A4": "2 7/8 in",
+        "Answer": "3 in"
+    },
+    {
+        "Question": "In the 85–86 season, the NHL Board made a decision to introduce offsetting penalties. What was this rule called?",
+        "A1": "Offset Rule",
+        "A2": "Gretzky Rule",
+        "A3": "Coincidental Rule",
+        "A4": "86er Rule",
+        "Answer": "Gretzky Rule"
+    },
+    {
+        "Question": "Every division has 8 teams except...",
+        "A1": "Metropolitan",
+        "A2": "Central",
+        "A3": "Pacific",
+        "A4": "Atlantic",
+        "Answer": "Central"
+    },
+    {
+        "Question": "What team did the Colorado Rockies become?",
+        "A1": "Calgary Flames",
+        "A2": "New Jersey Devils",
+        "A3": "Colorado Avalanche",
+        "A4": "Carolina Hurricanes",
+        "Answer": "New Jersey Devils"
+    },
+    {
+        "Question": "Which team won their first Stanley Cup playoff series in 2018?",
+        "A1": "Minnesota Wild",
+        "A2": "Winnipeg Jets",
+        "A3": "Carolina Hurricanes",
+        "A4": "Columbus Blue Jackets",
+        "Answer": "Winnipeg Jets"
+    },
+    {
+        "Question": "What trophy goes to the MVP of the playoffs?",
+        "A1": "Super Bowl",
+        "A2": "Conn Smythe",
+        "A3": "Stanley Cup",
+        "A4": "Commissioner's Trophy",
+        "Answer": "Conn Smythe"
+    },
+    {
+        "Question": "Who was drafted in the 2005 'Sweepstakes'?",
+        "A1": "Alex Ovechkin",
+        "A2": "Sidney Crosby",
+        "A3": "Auston Matthews",
+        "A4": "Conner McDavid",
+        "Answer": "Sidney Crosby"
+    },
+    {
+        "Question": "Which player has won the most Stanley Cups?",
+        "A1": "Mark Messier",
+        "A2": "Henri Richard",
+        "A3": "Ted Harris",
+        "A4": "Dick Duff",
+        "Answer": "Henri Richard"
+    },
+    {
+        "Question": "Who is the oldest active NHL player?",
+        "A1": "Jaromir Jagr",
+        "A2": "Matt Cullen",
+        "A3": "Sidney Crosby",
+        "A4": "Joe Thornton",
+        "Answer": "Matt Cullen"
+    },
+    {
+        "Question": "Who was 'Mr Hockey'?",
+        "A1": "Brett Hull",
+        "A2": "Gordie Howe",
+        "A3": "Mario Lemieux",
+        "A4": "Mark Messier",
+        "Answer": "Gordie Howe"
+    },
+    {
+        "Question": "What is it called when a puck goes in the net?",
+        "A1": "Score",
+        "A2": "Goal",
+        "A3": "Touchdown",
+        "A4": "Net",
+        "Answer": "Goal"
+    },
+    {
+        "Question": "What team is the newest addition to the NHL?",
+        "A1": "Washington Capitals",
+        "A2": "Vegas Golden Knights",
+        "A3": "Dallas Stars",
+        "A4": "New York Rangers",
+        "Answer": "Vegas Golden Knights"
+    },
+    {
+        "Question": "Who is the only skater to win the Conn Smythe Trophy in a losing cause? Hint: It was won in 1976.",
+        "A1": "Mike Bossy",
+        "A2": "Reggie Leach",
+        "A3": "Glenn Hall",
+        "A4": "Roger Crozier",
+        "Answer": "Reggie Leach"
+    },
+    {
+        "Question": "What city will be getting a hockey team in 2021?",
+        "A1": "Boise",
+        "A2": "Seattle",
+        "A3": "Kansas City",
+        "A4": "Stockton",
+        "Answer": "Seattle"
+    },
+    {
+        "Question": "How many periods are there in a hockey game?",
+        "A1": "1",
+        "A2": "2",
+        "A3": "3",
+        "A4": "4",
+        "Answer": "3"
+    },
+    {
+        "Question": "How many Stanley Cups did Wayne Gretzky win?",
+        "A1": "3",
+        "A2": "6",
+        "A3": "4",
+        "A4": "5",
+        "Answer": "4"
+    },
+    {
+        "Question": "How many players are on the ice during overtime in the regular season?",
+        "A1": "2",
+        "A2": "3",
+        "A3": "4",
+        "A4": "5",
+        "Answer": "4"
+    },
+    {
+        "Question": "How many players are on the ice at one time?",
+        "A1": "4",
+        "A2": "5",
+        "A3": "6",
+        "A4": "7",
+        "Answer": "6"
+    },
+    {
+        "Question": "How many teams did the NHL start out with?",
+        "A1": "2",
+        "A2": "4",
+        "A3": "6",
+        "A4": "8",
+        "Answer": "6"
+    },
+    {
+        "Question": "How many minutes is a major penalty?",
+        "A1": "2",
+        "A2": "4",
+        "A3": "5",
+        "A4": "10",
+        "Answer": "5"
+    },
+    {
+        "Question": "How many players are allowed on the bench?",
+        "A1": "10",
+        "A2": "15",
+        "A3": "20",
+        "A4": "22",
+        "Answer": "20"
+    },
+    {
+        "Question": "How many teams in the NHL are based in USA?",
+        "A1": "22",
+        "A2": "23",
+        "A3": "24",
+        "A4": "25",
+        "Answer": "24"
+    },
+    {
+        "Question": "How many teams are in the NHL?",
+        "A1": "25",
+        "A2": "30",
+        "A3": "31",
+        "A4": "35",
+        "Answer": "31"
+    },
+    {
+        "Question": "How many years has the NHL been around?",
+        "A1": "102",
+        "A2": "103",
+        "A3": "101",
+        "A4": "112",
+        "Answer": "102"
+    },
+    {
+        "Question": "What year was Eric Lindros drafted?",
+        "A1": "1992",
+        "A2": "1990",
+        "A3": "1991",
+        "A4": "1989",
+        "Answer": "1991"
+    },
+    {
+        "Question": "What is the minimum hight a player's numbers must be on the back of his sweater?",
+        "A1": "8 in",
+        "A2": "6 in",
+        "A3": "10 in",
+        "A4": "12 in",
+        "Answer": "10 in"
+    },
+    {
+        "Question": "How long is it from blue line to blue line?",
+        "A1": "60 ft",
+        "A2": "55 ft",
+        "A3": "50 ft",
+        "A4": "65 ft",
+        "Answer": "50 ft"
+    },
+    {
+        "Question": "Who is second in all time NHL points?",
+        "A1": "Gordie Howe",
+        "A2": "Mario Lemieux",
+        "A3": "Jaromir Jagr",
+        "A4": "Bobby Orr",
+        "Answer": "Jaromir Jagr"
+    },
+    {
+        "Question": "What is the trophy called that is won at the end of the final championship?",
+        "A1": "Super Bowl",
+        "A2": "Conn Smythe",
+        "A3": "Stanley Cup",
+        "A4": "Commissioner's Trophy",
+        "Answer": "Stanley Cup"
+    },
+    {
+        "Question": "If two teams are tied in points at the end of the regular season, what is used to determine who is first?",
+        "A1": "GF",
+        "A2": "DIFF",
+        "A3": "ROW",
+        "A4": "GA",
+        "Answer": "ROW"
+    },
+    {
+        "Question": "The act of throwing the body, from any direction, across or below the knees of an opponent is called...",
+        "A1": "Physical Foul",
+        "A2": "Charging",
+        "A3": "Clipping",
+        "A4": "Knee Chopping",
+        "Answer": "Clipping"
+    },
+    {
+        "Question": "The Conn Smythe Trophy has been won sixteen times by goaltenders. What other position has won it sixteen times?",
+        "A1": "Right Wingers",
+        "A2": "Defensemen",
+        "A3": "Centers",
+        "A4": "Left Wingers",
+        "Answer": "Centers"
+    },
+    {
+        "Question": "Out of these teams, who has never won a Stanley Cup?",
+        "A1": "Pittsburgh Penguins",
+        "A2": "New York Islanders",
+        "A3": "Vancouver Canucks",
+        "A4": "Los Angeles Kings",
+        "Answer": "Vancouver Canucks"
+    },
+    {
+        "Question": "Who is the youngest captain ever to hoist the Stanley Cup?",
+        "A1": "Alex Ovechkin",
+        "A2": "Wayne Gretzky",
+        "A3": "Sidney Crosby",
+        "A4": "Mario Lemieux",
+        "Answer": "Sidney Crosby"
+    },
+    {
+        "Question": "Why wasn't there a draft in 2004?",
+        "A1": "Not enough players",
+        "A2": "Not enough money",
+        "A3": "Lockout",
+        "A4": "Teams voted against it",
+        "Answer": "Lockout"
+    },
+    {
+        "Question": "In the regular season, what happens if overtime results in a tie score?",
+        "A1": "Game ends tied",
+        "A2": "Another overtime",
+        "A3": "Shootout",
+        "A4": "They toss a coin",
+        "Answer": "Shootout"
+    },
+    {
+        "Question": "Which team has the lowest point percentage in NHL history?",
+        "A1": "Carolina Hurricanes",
+        "A2": "Columbus Blue Jackets",
+        "A3": "Arizona Coyotes",
+        "A4": "Vancouver Canucks",
+        "Answer": "Arizona Coyotes"
+    },
+    {
+        "Question": "How many Alternate Captains can a team have when the Captain is not dressed for a game?",
+        "A1": "1",
+        "A2": "4",
+        "A3": "2",
+        "A4": "3",
+        "Answer": "3"
+    },
+    {
+        "Question": "How many players are on the ice during overtime in the playoffs?",
+        "A1": "3",
+        "A2": "4",
+        "A3": "5",
+        "A4": "6",
+        "Answer": "6"
+    },
+    {
+        "Question": "How many teams in the NHL are based in the Canada?",
+        "A1": "6",
+        "A2": "5",
+        "A3": "8",
+        "A4": "7",
+        "Answer": "7"
+    },
+    {
+        "Question": "How many defunct and relocated teams in the NHL are there?",
+        "A1": "10",
+        "A2": "5",
+        "A3": "16",
+        "A4": "19",
+        "Answer": "19"
+    },
+    {
+        "Question": "How many different hand signals does a referee make?",
+        "A1": "20",
+        "A2": "10",
+        "A3": "15",
+        "A4": "30",
+        "Answer": "30"
+    },
+    {
+        "Question": "How heavy is an NHL hockey puck?",
+        "A1": "3oz",
+        "A2": "4oz",
+        "A3": "5oz",
+        "A4": "6oz",
+        "Answer": "6oz"
+    },
+    {
+        "Question": "What happened at the first ever hockey game that exists in todays game?",
+        "A1": "Beer was served",
+        "A2": "Three pucks were used",
+        "A3": "There was 4 periods",
+        "A4": "A fight broke out",
+        "Answer": "A fight broke out"
+    },
+    {
+        "Question": "What player is known as 'The Golden Jet'?",
+        "A1": "Mark Messier",
+        "A2": "Bobby Orr",
+        "A3": "Jeff Skinner",
+        "A4": "Bobby Hull",
+        "Answer": "Bobby Hull"
+    },
+    {
+        "Question": "The Stockton Heat play in Stockton, CA. Who is their NHL affiliate?",
+        "A1": "Pittsburgh Penguins",
+        "A2": "New Jersey Devils",
+        "A3": "Florida Panthers",
+        "A4": "Calgary Flames",
+        "Answer": "Calgary Flames"
+    },
+    {
+        "Question": "What is Vancouver's team name?",
+        "A1": "Stars",
+        "A2": "Sabers",
+        "A3": "Oilers",
+        "A4": "Canucks",
+        "Answer": "Canucks"
+    },
+    {
+        "Question": "Which team in 1976 merged with the Minnesota North Stars, who are currently the Dallas Stars?",
+        "A1": "Philadelphia Quakers",
+        "A2": "Kansas City Scouts",
+        "A3": "Atlanta Flames",
+        "A4": "Cleveland Barons",
+        "Answer": "Cleveland Barons"
+    },
+    {
+        "Question": "Who was the oldest player to win the Art Ross Trophy?",
+        "A1": "Wayne Gretzky",
+        "A2": "Jaromir Jagr",
+        "A3": "Eric Lindros",
+        "A4": "Martin St. Louis",
+        "Answer": "Martin St. Louis"
+    },
+    {
+        "Question": "What team did Wayne Gretzky retire with?",
+        "A1": "Los Angeles Kings",
+        "A2": "St. Louis Blues",
+        "A3": "Edmonton Oilers",
+        "A4": "New York Rangers",
+        "Answer": "New York Rangers"
+    },
+    {
+        "Question": "What player is known as 'Houdini'?",
+        "A1": "Patrick Kane",
+        "A2": "Wayne Gretzky",
+        "A3": "Peter Forsberg",
+        "A4": "Pavel Datsyuk",
+        "Answer": "Pavel Datsyuk"
+    },
+    {
+        "Question": "Who is the only teenager ever to win the Art Ross trophy?",
+        "A1": "Alex Ovechkin",
+        "A2": "Wayne Gretzky",
+        "A3": "Mario Lemieux",
+        "A4": "Sidney Crosby",
+        "Answer": "Sidney Crosby"
+    },
+    {
+        "Question": "What frozen substance is hockey played on?",
+        "A1": "Plastic",
+        "A2": "Ice",
+        "A3": "Concrete",
+        "A4": "Water",
+        "Answer": "Water"
+    },
+    {
+        "Question": "Who is the 'Great One'?",
+        "A1": "Sidney Crosby",
+        "A2": "Brett Hull",
+        "A3": "Mario Lemieux",
+        "A4": "Wayne Gretzky",
+        "Answer": "Wayne Gretzky"
+    },
+    {
+        "Question": "Who is only defenseman to win the Conn Smythe Trophy twice?",
+        "A1": "Fredrik Olausson",
+        "A2": "Bobby Orr",
+        "A3": "Aubrey Clapper",
+        "A4": "Lionel Conacher",
+        "Answer": "Bobby Orr"
+    }
+]

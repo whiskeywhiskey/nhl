@@ -5,7 +5,7 @@ import { SoundService } from 'src/app/_services/sound.service';
 @Component({
   selector: 'app-select-game-page',
   templateUrl: './select-game-page.component.html',
-  styleUrls: ['./select-game-page.component.css']
+  styleUrls: ['./select-game-page.component.scss']
 })
 export class SelectGamePageComponent implements OnInit {
 

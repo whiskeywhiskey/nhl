@@ -6,7 +6,7 @@ import { SoundService } from 'src/app/_services/sound.service';
 @Component({
   selector: 'app-game-over-page',
   templateUrl: './game-over-page.component.html',
-  styleUrls: ['./game-over-page.component.css']
+  styleUrls: ['./game-over-page.component.scss']
 })
 export class GameOverPageComponent implements OnInit, OnDestroy {
   sub: Subscription;
