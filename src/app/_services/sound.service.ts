@@ -12,8 +12,6 @@ export class SoundService {
   correct = new Audio();
   tick = new Audio();
   button = new Audio();
-  music = new BehaviorSubject<boolean>(true);
-  buttonSound = new BehaviorSubject<boolean>(true);
 
   constructor() {
     this.nhl.src = './assets/sound/nhl.wav';
@@ -25,9 +23,8 @@ export class SoundService {
     this.button.src = './assets/sound/button.wav';
     this.loadAudio();
     this.autoReload();
-    this.nhl.play();
   }
-
+  
   loadAudio() {
     this.nhl.load();
     this.penalty.load();
@@ -83,21 +80,17 @@ export class SoundService {
 
   killMusic() {
     this.nhl.pause();
-    this.music.next(false);
   }
 
   addMusic() {
     this.nhl.play();
-    this.music.next(true);
   }
 
   killButton() {
     this.button.volume = 0;
-    this.buttonSound.next(false);
   }
 
   addButton() {
     this.button.volume = 1;
-    this.buttonSound.next(true);
   }
 }

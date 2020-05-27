@@ -1,0 +1,71 @@
+<div class="bgimg2">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mt-2">
+        <div class="my-img"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-sm-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          End of Period &nbsp; <span id="periodI">{{game.Game.Period}}</span>
+        </h3>
+      </div>
+      <div class="col-3">
+
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-sm-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          Your Score: &nbsp; <span id="scoreI">{{game.Game.Score}}</span>
+        </h3>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+  </div>
+
+
+  <div class="container-fluid mt-2">
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+
+      <div *ngIf='computer' class="col-6 whitebg d-flex justify-content-center pt-2">
+        <h3>
+          Computer Score: &nbsp; <span id="scoreIC">{{game.Game.ComputerScore}}</span>
+        </h3>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+  </div>
+
+  <div class="container-fluid homepagedown">
+    <div class="row">
+
+      <div class="col-sm-6 d-flex justify-content-center">
+        <app-button text="Home" klass="full" link="/"></app-button>
+      </div>
+      <div class="col-sm-6 d-flex justify-content-center">
+        <app-button text="Continue" klass="full" link="/game-play" (btnClick)="nextPeriod()"></app-button>
+      </div>
+
+    </div>
+  </div>
+</div>

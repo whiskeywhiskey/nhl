@@ -1,0 +1,67 @@
+.bgimg {
+    background-image: url(../../../assets/gameplay.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.my-img {
+    background-image: url(../../../assets/logo.png);
+    background-position: center;
+    background-size: cover;
+    width: 20em;
+    height: 20em;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .5rem 8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 60vh;
+}
+
+button#option {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .3rem 6rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 10vh;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.btn {
+    width: 40vw;
+}
+
+.btn:hover {
+    background-color: rgb(173, 173, 173) !important;
+    color: black !important;
+}
+
+.homepagedown {
+    margin-top: 5vh;
+}
+
+.white {
+    color: white;
+}

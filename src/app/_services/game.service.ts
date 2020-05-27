@@ -1,14 +1,138 @@
 import { Injectable } from '@angular/core';
+import { IGameplay } from '../shared/interfaces/i-gameplay';
+import { IOptions } from '../shared/interfaces/i-options';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
-import { SoundService } from './sound.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
-  diff;
+  Game: IGameplay = {
+    PlayerName: 'Player',
+    Score: 0,
+    ComputerScore: 0,
+    ScoreStreak: 0,
+    Stats: {
+      CorrectAnswers: 0,
+      IncorrectAnswers: 0,
+      HatTricks: 0,
+      Penalties: 0
+    },
+    Period: 1,
+    QuestionsGuessed: 0,
+    GameOptions: {},
+    Time: 0
+  };
+  Options: IOptions = {
+    Music: true,
+    Button: true
+  };
+  questions: any;
+  interval: NodeJS.Timeout;
+
+  constructor(private http: HttpClient, private router: Router) {
+    this.getData();
+  }
+
+  getData() {
+    this.http.get('assets/data.json').subscribe(
+      res => this.questions = res
+    );
+  }
+
+  nextQuestion() {
+    this.Game.Question = this.questions[Math.floor((Math.random() * this.questions.length - 1) + 1)];
+  }
+
+  checkAnswer(value: string) {
+    // debugger
+    if (value == this.Game.Question.Answer) {
+      this.Game.Stats.CorrectAnswers++;
+      this.Game.ScoreStreak++;
+      if (this.Game.ScoreStreak == 3) {
+        this.Game.Score += 2;
+        this.Game.ScoreStreak = 0;
+      } else {
+        this.Game.Score++;
+        this.Game.ScoreStreak++;
+      }
+      //if (this.shortHanded > 0) {
+      //  const sh = this.shg.value;
+      //  this.shg.next(sh + 1);
+      //  this.shortHanded--;
+      //}
+      //this.soundService.correct.play();
+    } else {
+      this.Game.Stats.IncorrectAnswers++;
+      this.Game.ScoreStreak = 0;
+      //this.incorrectAnswer.next(true);
+      //this.soundService.wrong.play();
+    }
+    //console.log(this.Game.Stats);
+    this.Game.QuestionsGuessed++;
+    if (this.Game.QuestionsGuessed == 10 || this.Game.QuestionsGuessed == 20) {
+      clearInterval(this.interval);
+      this.router.navigateByUrl('intermission');
+    } else if (this.Game.QuestionsGuessed == 30) {
+      clearInterval(this.interval);
+      this.router.navigateByUrl('game-over');
+    } else {
+      this.nextQuestion()
+    }
+    this.Game.Time = this.Game.GameOptions.TimeReset;
+    //this.clearTimer();
+    //setTimeout(() => {
+    //  if (value === this.data[this.num].an) {
+    //    this.correct++;
+    //    this.correctCounter++;
+    //    this.increaseScore();
+    //  } else {
+    //    this.correctCounter = 0;
+    //  }
+    //  if (this.computer.value) {
+    //    this.computerPlay();
+    //  }
+    //  this.data.splice(this.num, 1);
+    //  this.l = this.data.length;
+    //  this.correctAnswer.next(false);
+    //  this.incorrectAnswer.next(false);
+    //  if (!this.intermissionCheck() && !this.gameOver()) {
+    //    this.nextQuestion();
+    //    if (this.shortHanded === 0) {
+    //      this.origTime = 15;
+    //    }
+    //    this.setTimer();
+    //  } else {
+    //    this.changePage();
+    //  }
+    //}, 300);
+  }
+
+  setTimer() {
+    this.interval = setInterval(() => {
+      if (this.Game.Time !== 0) {
+        this.Game.Time--;
+      } else {
+        this.checkAnswer('');
+        this.Game.Time = this.Game.GameOptions.TimeReset;//.time.next(this.origTime);
+      }
+    }, 1000);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* diff;
   data = [];
   origTime: number;
   ppg = new BehaviorSubject<number>(0);
@@ -265,6 +389,6 @@ export class GameService {
     this.shortHanded = 0;
     this.origTime = 15;
     this.getData();
-  }
+  } */
 
 }

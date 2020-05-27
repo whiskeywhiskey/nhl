@@ -1,0 +1,276 @@
+.bgimg {
+    background-image: url(../../../assets/gameplay.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.questionArea {
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 6px;
+    border-radius: 16px;
+    font-size: 2rem;
+    height: 10rem;
+    width: 67vw;
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 8em;
+    color: red;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#p {
+    border-radius: 10px;
+}
+
+.my-img {
+    background-image: url(../../../assets/logo.png);
+    background-position: center;
+    background-size: cover;
+    width: 10em;
+    height: 10em;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .5rem 8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 60vh;
+}
+
+.buttonChoice {
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    background-color: white;
+    width: 100vh !important;
+}
+
+.buttonGame {
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: -.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+}
+
+.button-special {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .5rem 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 0px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 2rem;
+    width: 40vw;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+#questionArea {
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 6px;
+    border-radius: 16px;
+    font-size: 2rem;
+    height: 10rem;
+    width: 100rem;
+}
+
+.moveBottomStuff {
+    margin-top: 5rem;
+}
+
+.dropdown-item {
+    width: 40vw;
+}
+
+.btn {
+    width: 40vw;
+}
+
+.btn:hover {
+    background-color: rgb(173, 173, 173) !important;
+    color: black !important;
+}
+
+.button:hover {
+    background-color: rgb(173, 173, 173);
+    color: black;
+}
+
+.homepagedown {
+    margin-top: 5vh;
+}
+
+.movetobottom {
+    margin-top: 25vh;
+}
+
+.selectpagedown {
+    margin-top: 8rem;
+}
+
+.whitebg {
+    background-color: white;
+}
+
+.white {
+    color: white;
+}
+
+#p {
+    height: 3em;
+}
+
+.bounceIn {
+    font-weight: 600;
+    color: red;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+}
+
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.slideDown {
+    visibility: visible!important;
+    animation-name: slideDown;
+    -webkit-animation-name: slideDown;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes slideDown {
+    0% {
+        -webkit-transform: translateY(-100%);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1
+    }
+}

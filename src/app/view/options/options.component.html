@@ -1,0 +1,59 @@
+<div class="bgimg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="white d-flex justify-content-center text-align-center">
+          Options
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center mt-2">
+        <div class='my-img'></div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-4">
+    <form [formGroup]="options">
+      <div class="row">
+        <div class='col-12 d-flex justify-content-center'>
+          <div class="wrap">
+            <div class="row pt-2">
+              <div class="col-6 d-flex justify-content-center">
+                <h3 class='black'>Music</h3>
+              </div>
+              <div class="col-6 d-flex justify-content-center">
+                <label class="switch">
+                  <input id='checkMaster' type="checkbox" formControlName="music" (change)="change('Music')">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class='wrap'>
+              <div class="row pt-2">
+                <div class="col-6 d-flex justify-content-center">
+                  <h3 class='black'>Button</h3>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                  <label class="switch">
+                    <input id='buttonMaster' type="checkbox" formControlName="button" (change)="change('Button')">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container homepagedown">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <button type="button" class="button d-flex justify-content-center" routerLink="" id="start">Home</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,17 +1,16 @@
 import { IQuestion } from './i-question';
 import { IGameStats } from './i-game-stats';
+import { IGameOptions } from './i-game-options';
 
 export interface IGameplay {
     PlayerName: string;
     Score: number;
-    ComputerScore?: number;
-    TimeReset: number;
-    PenaltyTime: number;
+    ComputerScore: number;
     ScoreStreak: number;
-    Mode: string;
-    Difficulty: string;
-    Question: IQuestion;
+    GameOptions?: IGameOptions;
+    Question?: IQuestion;
     Stats: IGameStats;
     Period: number;
     QuestionsGuessed: number;
+    Time: number;
 }
