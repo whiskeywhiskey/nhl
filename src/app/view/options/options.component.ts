@@ -19,45 +19,10 @@ export class OptionsComponent implements OnInit {
       button: this.game.Options.Button
     });
   }
+  
   change(type: number) {
     this.game.Options[type] = !this.game.Options[type];
     this.options.value.music == false ? this.soundService.killMusic() : this.soundService.addMusic();
     this.options.value.button == false ? this.soundService.killButton() : this.soundService.addButton();
   }
 }
-/*     const cc = document.getElementById('checkMaster') as HTMLInputElement;
-    const bs = document.getElementById('buttonMaster') as HTMLInputElement;
-    if (this.soundService.music.value) {
-      cc.checked = true;
-    } else {
-      cc.checked = false;
-    }
-    if (this.soundService.buttonSound.value) {
-      bs.checked = true;
-    } else {
-      bs.checked = false;
-    }
- */
-
-/*   btnClicked() {
-    this.soundService.button.play();
-  }
-
-  s(e) {
-    this.soundService.button.play();
-    if (e.target.checked) {
-      this.soundService.addMusic();
-    } else {
-      this.soundService.killMusic();
-    }
-  }
-
-  b(e) {
-    this.soundService.button.play();
-    if (e.target.checked) {
-      this.soundService.addButton();
-    } else {
-      this.soundService.killButton();
-    }
-  }
- */
